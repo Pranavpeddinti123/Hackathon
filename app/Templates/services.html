@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    .full {
+      width: 100%;
+      height: 100vh;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      background:
+        linear-gradient(to right, rgba(194, 187, 255, 1), rgba(188, 236, 255, 0.42)),
+        linear-gradient(to right, #C2BBFF, #FFBBBB);
+      position: relative;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    nav .img img {
+      width: 60px;
+    }
+    nav .links ul {
+      display: flex;
+      list-style: none;
+      gap: 50px;
+    }
+    nav .links ul li a {
+      text-decoration: none;
+      color: #807d94;
+      font-family: "Jomhuria", serif;
+      font-weight: bold;
+      font-size: 22px;
+      transition: 0.3s;
+    }
+    nav .links ul li a:hover {
+      color: #F96E41;
+    }
+    nav .links ul li:nth-child(1) a {
+      color: #F96E41;
+    }
+    .btn button {
+      border: none;
+      background-color: #F96E41;
+      color: white;
+      font-family: "Jomhuria", serif;
+      font-size: 20px;
+      padding: 5px 10px;
+      border-radius: 26px;
+      cursor: pointer;
+    }
+    .services-section {
+      text-align: center;
+      padding: 50px 15px;
+      background-color: #fff;
+      border-radius: 20px;
+      margin: 50px auto;
+      width: 80%;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+       background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .services-section h1 {
+      font-family: "Jomhuria", serif;
+      font-size: 50px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .services-section p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .services-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .service-feature {
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+       background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .service-feature h3 {
+      font-family: "Jomhuria", serif;
+      color: #F96E41;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .service-feature p {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      .services-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="full">
+    <div class="container">
+      <nav>
+        <div class="img">
+          <img src="{% static 'images/mundo 2.png' %}" alt="Logo">
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="{% url 'HomePage' %}">Home</a></li>
+            <li><a href="{% url 'About_us' %}">About Us</a></li>
+          </ul>
+        </div>
+        <div class="btn">
+          <a href="{% url 'Translator' %}"><button>Get Started</button></a>
+        </div>
+      </nav>
+      <div class="services-section">
+        <h1>Our Services</h1>
+        <p>
+          Explore a range of features designed to enhance your language learning and communication experience.
+        </p>
+        <div class="services-features">
+          <div class="service-feature">
+            <h3>Real-Time Translation</h3>
+            <p>Connect across languages seamlessly with our advanced translation tools.</p>
+          </div>
+          <div class="service-feature">
+            <h3>Customized Lessons</h3>
+            <p>Personalized lessons tailored to your learning style and pace.</p>
+          </div>
+          <div class="service-feature">
+            <h3>Interactive Tools</h3>
+            <p>Enjoy interactive tools to practice and perfect your skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

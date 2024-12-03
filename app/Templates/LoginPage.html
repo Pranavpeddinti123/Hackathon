@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .full-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+
+  }
+
+
+
+  .container h1 {
+    font-size: 50px;
+  }
+
+  .containerOne h1 {
+    color: red;
+  }
+
+
+
+  .containerTwo {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+
+  }
+
+  .containerOne h1,
+  h4 {
+    color: white;
+
+  }
+
+  .containerOne h1 {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+
+  .containerOne h4 {
+    width: 500px;
+    text-align: center;
+    font-family: "Akaya Telivigala", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+  }
+
+  .image-1 {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+  }
+
+  .image-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .image-3 {
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+
+  .form-container h1 {
+    font-family: "Hedvig Letters Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #009EE2;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-container p {
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.503);
+  }
+
+  .form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .form-container .text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .submition {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .submition #sub {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #name {
+    margin-left: 37px;
+  }
+
+  #email {
+    margin-left: 18px;
+  }
+
+  #Password {
+    margin-left: 10px;
+
+  }
+
+  #name,
+  #email,
+  #lastName,
+  #Password {
+    padding: 5px;
+    outline: none;
+  }
+
+  .von-4 {
+    margin-top: 15px;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  .push {
+    color: white;
+    background-color: #009EE2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+
+  .line::before {
+    content: '——————';
+    margin-right: 10px;
+  }
+
+  .line::after {
+    content: '——————';
+    margin-left: 10px;
+  }
+
+  .links img {
+    margin-right: 20px;
+  }
+
+  .links {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+  }
+
+  label {
+    color: rgba(0, 0, 0, 0.503);
+  }
+
+  .whole {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+  }
+
+  .auto-type {
+    color: #009EE2;
+  }
+
+  .containerOne {
+    overflow: hidden;
+    width: 50%;
+    height: 100vh;
+    /*
+       background: url(images/Rectangle\ 26.png);
+        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+    */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+
+  }
+
+  .box {}
+
+  .box .text {
+    position: relative;
+    color: #4070F4;
+    font-size: 55px;
+    font-weight: 600;
+  }
+
+  .box .text.first-text {
+    color: black;
+  }
+
+  .text.sec-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+  }
+
+  @keyframes animate {
+
+    40%,
+    60% {
+      left: 100%;
+    }
+
+    100% {
+      left: 0%;
+    }
+  }
+</style>
+
+<body>
+  <div class="whole">
+
+    <div class="full-container">
+      <div class="container">
+        <div class="containerOne">
+          <!-- <h1 class="main-txt">Travelista Tours</h1>
+      <h4 class="sub-txt">Travel is the only purchase that enriches you in ways
+        beyond material wealth</h4> -->
+          <div class="box">
+            <span class="text first-text">Translator </span>
+            <span class="text sec-text">Hello</span>
+          </div>
+
+        </div>
+        <div class="containerTwo">
+          <img src="{% static 'images/Vector (2).png' %}" alt="" class="image-1">
+          <img src="{% static 'images/Group 688.png' %}" alt="" class="image-2">
+          <img src="{% static 'images/Vector (3).png' %}" alt="" class="image-3">
+
+          <div class="form-container">
+            <div class="text" style="margin-bottom: 40px;">
+              <h1 class="wel">Welcome</h1>
+              <p>Login with email</p>
+            </div>
+
+            <div class="submition" style="width: 500px; height: 500px; ">
+              <form method="POST" action="" id="sub">
+                {% csrf_token %}
+
+                <div class="von-3" style="margin-top: 60px;">
+                  <label for="email">Email Id:</label>
+                  <input type="text" id="email" name="email" autocomplete="off">
+                </div>
+
+                <div class="von-4">
+                  <label for="Password">Password:</label>
+                  <input type="password" id="Password" name="password" autocomplete="off">
+                </div>
+
+                <input class="push" type="submit" value="Login">
+
+              </form>
+              <a href="">
+                <p style="font-size: 12px; margin-left: 160px; margin-top: 10px;">forget your password?</p>
+              </a>
+
+
+
+              <p style="margin-top: 15px;" class="line">OR</p>
+              <div class="links">
+                <a href="#"><img src="{% static 'images/Google__G__Logo.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'images/XMLID_17_.png' %}" alt=""></a>
+                <a href="#"><img src="{% static 'images/Icon awesome-apple.png' %}" alt=""></a>
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script>
+
+    const text = document.querySelector(".sec-text");
+
+    const textLoad = () => {
+      setTimeout(() => {
+        text.textContent = `"Hello"`;
+      }, 0);
+      setTimeout(() => {
+        text.textContent = `"こんにちは"`;
+      }, 4000);
+      setTimeout(() => {
+        text.textContent = `"你好"`;
+      }, 8000);
+
+
+
+    }
+    textLoad();
+    setInterval(textLoad, 12000);
+
+
+
+    gsap.from(".main-txt", {
+
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 1,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      y: -50,
+      opacity: 0,
+
+      // Ease effect
+
+    }, 'x');
+
+    gsap.from(".sub-txt", {
+      opacity: 0,
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 0.5,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      x: -400,
+      // Ease effect
+
+    }, 'x');
+
+    gsap.from(".image-3", {
+      opacity: 0,
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 0.5,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      x: 400,
+      // Ease effect
+
+    }, 'x');
+
+    gsap.from(".image-2", {
+      opacity: 0,
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 0.5,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      y: 200,
+      // Ease effect
+
+    }, 'x');
+
+    gsap.from(".image-1", {
+      opacity: 0,
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 0.5,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      y: 200,
+      // Ease effect
+
+    }, 'x');
+
+    gsap.from(".wel", {
+      opacity: 0,
+      duration: 1.5, // Animation lasts for 1.5 seconds
+      delay: 0.5,    // Starts after 0.5 seconds
+      ease: "power2.out",
+      y: -100,
+      // Ease effect
+
+    }, 'x');
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

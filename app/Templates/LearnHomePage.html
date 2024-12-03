@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      /* Changed background to white */
+      color: #333;
+      /* Default text color */
+    }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Blur effect for Glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border for glass effect */
+    border-radius: 12px; /* Smooth rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    position: fixed; /* Keeps nav bar fixed on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; /* White text to contrast with the transparent background */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Hover effect with a bright color */
+}
+
+    .signup-btn {
+      padding: 10px 20px;
+      background-color: white;
+      border: 1px solid #800080;
+      color: #800080;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 100px;
+      background-color: #ffffff;
+      /* White background */
+      color: #333;
+    }
+
+    .main-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .main-content .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-content .buttons a {
+      padding: 10px 25px;
+      background-color: #FF6600;
+      /* Orange button */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .flags {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .flags img {
+      width: 50px;
+      height: auto;
+    }
+
+    .why-us {
+      background-color: #f9f9f9;
+      /* Light grey background for why-us section */
+      color: #333;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .why-us h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .why-us .benefits {
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .why-us .benefit {
+      width: 30%;
+    }
+
+    .why-us .benefit h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .why-us .benefit p {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Section -->
+  <nav>
+    <div class="logo" style="width:40px">
+      <img width="100%" src="https://www.freepnglogos.com/uploads/translate-logo-png/logos-translate-icon-for-website-10.png" alt="">
+    </div>
+    <ul>
+      <li><a href="{% url 'HomePage'%}" style="font-size:20px;"
+      >Home</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- Main Section -->
+  <div class="main-content">
+    <div class="text-content" style="margin-top: 150px;">
+      <h1 >Learn a New Language</h1>
+      <p>A learning system based on formalised teaching with the help of resources.</p>
+      <div class="buttons">
+
+        <a href="{% url 'Books' %}">Buy more language Products</a>
+      </div>
+
+    </div>
+    <div class="image-container" style="margin-top: 20px;">
+      <img src="{% static 'images/Hero2.png' %}" alt="Language Learning Image">
+    </div>
+  </div>
+
+  <!-- Why We Are the Best Section -->
+  <div class="why-us">
+    <h2>Why We Are the Best</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Native Teachers</h3>
+        <p>A learning system based on formalised teaching.</p>
+      </div>
+      <div class="benefit">
+        <h3>Online Courses</h3>
+        <p>Access our courses anytime, anywhere.</p>
+      </div>
+      <div class="benefit">
+        <h3>24/7 Support</h3>
+        <p>We offer round-the-clock support for all learners.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

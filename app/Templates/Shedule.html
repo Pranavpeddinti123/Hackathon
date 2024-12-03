@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+</head>
+ <style>
+  .full{
+    width: 100%;
+    height: 100vh;
+  }
+  .container{
+    width: 100%;
+    height: 100vh;
+    background:
+        linear-gradient(to right, rgba(194, 187, 255, 1), rgba(188, 236, 255, 0.42)),
+        linear-gradient(to right, #C2BBFF, #FFBBBB);
+
+   overflow: hidden;
+   position: relative;
+  }
+  .recOne{
+    position: absolute;
+    width: 240px;
+    opacity: 0.4;
+    top: 200px;
+    left: 400px;
+  }
+  .recTwo{
+width: 200px;
+opacity: 0.4;
+  }
+  .textspeak{
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    width: 450px;
+  }
+  .notations{
+    position: absolute;
+    top: 100px;
+    left: 440px;
+  }
+  .we_tran{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+  }
+  .arrow{
+    position: absolute;
+    top: 370px;
+    left: 100px;
+    width: 450px;
+  }
+  .girl{
+        position: absolute;
+     top: 80px;
+     right: 250px;
+    width: 200px;
+  }
+  .girl_back{
+        position: absolute;
+     top: 80px;
+     right: 250px;
+    width: 200px;
+    opacity: 0.6;
+  }
+  .girl_back2{
+         position: absolute;
+     top: 90px;
+     right: 240px;
+    width: 200px;
+  }
+  .lastRec{
+    position: absolute;
+    top: 300px;
+    right: -100px;
+    width: 200px;
+    opacity: 0.4;
+  }
+  .tran1{
+      position: absolute;
+    top: 200px;
+    right: 60px;
+    width: 200px;
+
+  }
+    .tran2{
+      position: absolute;
+    top: 450px;
+    right: 60px;
+    width: 200px;
+
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  nav .img img{
+    width: 60px;
+  }
+  nav .links ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+
+  }
+  nav .links ul li a{
+    text-decoration:none;
+   color: #807d94;
+  font-family: "Jomhuria", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 35px;
+ transition: 0.3s;
+
+
+  }
+    nav .links ul li a:hover{
+       color: #F96E41;
+    }
+
+  nav .links ul li:nth-child(1) a{
+    color: #F96E41;
+  }
+  .btn button{
+    border: none;
+    background-color: #F96E41;
+    color: white;
+      font-family: "Jomhuria", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .register{
+    margin-top: 50px;
+    margin-left: 150px;
+
+  }
+  .register button{
+    border: none;
+    color: white;
+    background-color: #283A90;
+    font-family: "Jomhuria", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    padding: 8px 25px;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: .3s;
+
+  }
+   .register button:hover{
+       background-color: #283990a8;
+
+   }
+
+ </style>
+<body>
+  <div class="full">
+    <div class="container">
+
+      <nav>
+        <div class="img">
+          <img src="{% static 'images/mundo 2.png' %}" alt="">
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'Shedule' %}">Schedule</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'About_us' %}">About Us</a></li>
+          </ul>
+        </div>
+        <div class="btn">
+         <a href="{% url 'Translator' %}" target="_blank"><button>Get Started</button></a>
+        </div>
+      </nav>
+
+        </div>
+    </div>
+  </div>
+  <script>
+
+const imagesWithBounds = [
+  { selector: '.girl_back2', xRange: 3, yRange: 3 },
+  { selector: '.girl', xRange: 5, yRange: 5 },
+  { selector: '.tran1', xRange: 4, yRange: 4 },
+  { selector: '.tran2', xRange: 3, yRange: 3 },
+  { selector: '.lastRec', xRange: 6, yRange: 6 },
+   { selector: '.girl_back', xRange: 4, yRange: 6 },
+    { selector: '.notations', xRange: 2, yRange: 3 },
+     { selector: '.textspeak', xRange: 4, yRange: 5},
+      { selector: '.we_tran', xRange: 2, yRange: 4 },
+       { selector: '.arrow', xRange: 4, yRange:3 }
+
+];
+
+
+document.addEventListener('mousemove', (e) => {
+  const { clientX, clientY } = e;
+  const { innerWidth, innerHeight } = window;
+
+
+  const xFactor = (clientX / innerWidth - 0.5) * 4;
+  const yFactor = (clientY / innerHeight - 0.5) * 4;
+
+  // Apply individual movement ranges
+  imagesWithBounds.forEach(({ selector, xRange, yRange }) => {
+    const img = document.querySelector(selector);
+    if (img) {
+      const movementX = xFactor * xRange;
+      const movementY = yFactor * yRange;
+
+
+      img.style.transform = `translate(${movementX}px, ${movementY}px)`;
+    }
+  });
+});
+
+
+  </script>
+</body>
+</html>

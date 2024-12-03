@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Protest+Revolution&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Yuji+Mai&display=swap"
+  rel="stylesheet">
+</head>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #d3caea;
+      font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 0;
+    background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FAFAFA;
+  }
+
+  nav h1 {
+
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .nav-bar .links ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-bar .links ul li a {
+    text-decoration: none;
+    color: #2c2c2c;
+    margin: 0 10px;
+    font-size: 22px;
+    position: relative;
+    font-weight: bold;
+  }
+
+  .nav-bar .links ul li a::before {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #f96e41;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+
+  }
+
+  .nav-bar .links ul li a:hover::before {
+    width: 100%;
+  }
+
+  .Login {
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: #f96e41;
+     font-size: 13px;
+    font-weight: 600;
+     font-family: "Titillium Web", sans-serif;
+    cursor: pointer;
+      padding: 8px 25px;
+    border-radius: 23px;
+  }
+
+  /*
+    @media (min-width: 600px) {
+      body{
+        display: none;
+      }
+
+  } */
+  @media (max-width: 599px) {
+    nav h1 {
+      font-size: 24px;
+    }
+  }
+
+  /* .vis{
+  display: none;
+} */
+
+
+  .box-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+     font-family: "Titillium Web", sans-serif;
+     font-size: 15px;
+     font-weight: 500;
+
+  }
+
+  .tran {
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+     font-family: "Titillium Web", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .tran option {
+    font-size: 15px;
+
+
+  }
+
+
+
+  .tran1 {
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+ font-size: 18px;
+    font-weight: 600;
+     font-family: "Titillium Web", sans-serif;
+  }
+
+  .tran1 option {
+    font-size: 15px;
+
+
+  }
+
+  .boxTwo-nav {
+   background: transparent;
+      backdrop-filter: blur(15px); /* Frosted glass blur effect */
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+
+  }
+
+  .One {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  textarea#Field1 {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+    /* Allows users to resize the textarea */
+  }
+
+  textarea#Field2 {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+    /* Allows users to resize the textarea */
+  }
+
+  .o {
+    display: flex;
+    align-items: center;
+  }
+
+  .Login a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* .three{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  } */
+  .three .transl {
+    background-color: #FF6600;
+    border: none;
+    padding: 10px 24px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .three1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .three1 i {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  .wel {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .wel h1 {
+    font-size: 25px;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .reffer1,.reffer2{
+    font-weight: 400;
+  }
+</style>
+
+<body>
+  <!-- <h1 class="vis">You cant use this website</h1> -->
+  <div class="full-container" >
+    <nav class="nav-bar">
+      <div class="logo">
+        <h1 style="color: #f96e41;">Translator</h1>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="{% url 'LearnHomePage'%}">Learn</a></li>
+
+
+        </ul>
+      </div>
+      <div class="buttons">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" target="_blank"><button class="Login">Logout</button></a>
+        {% else %}
+        <a href="{% url 'LoginPage' %}" target="_blank"><button class="Login">Login or Signup</button></a>
+        {% endif %}
+      </div>
+    </nav>
+    <div class="wel">
+      {% if user.is_authenticated %}
+      <h1>Welcome, {{user.username}}</h1>
+      {% else %}
+      <h1>Welcome to the Website</h1>
+      {% endif %}
+    </div>
+    <div class="box-nav" >
+      <div class="type-one">
+        <select class="tran">
+          <option name="English" value="en">English</option>
+          <option name="Spanish" value="es">Spanish</option>
+          <option name="French" value="fr">French</option>
+          <option name="German" value="de">German</option>
+        </select>
+      </div>
+      <div class="type-two">
+        <img class="reverse" style="cursor: pointer;" src="images/ic_round-swap-horiz.png" alt=""
+          onclick="swapOptions();">
+      </div>
+      <div class="type-three">
+        <select class="tran1">
+          <option name="Spanish" value="es">Spanish</option>
+          <option name="English" value="en">English</option>
+          <option name="French" value="fr">French</option>
+          <option name="German" value="de">German</option>
+        </select>
+      </div>
+    </div>
+    <div class="boxTwo-nav">
+      <div class="One">
+        <div class="o">
+          <h2 class="reffer1" style="margin-right: 20px; "></h2>
+          <img class="speak" style="cursor: pointer;" src="{% static 'images/fluent_speaker-1-24-regular.png' %}"
+            alt="">
+        </div>
+        <div class="o2">
+          <i class="fa-solid fa-x" style="cursor : pointer;"></i>
+        </div>
+
+      </div>
+      <div class="Two">
+        <textarea name="" id="Field1"></textarea>
+      </div>
+      <div class="three">
+        <button class="transl">Translate</button>
+      </div>
+
+    </div>
+
+    <div class="boxTwo-nav">
+      <div class="One">
+        <div class="o">
+          <h2 class="reffer2" style="margin-right: 20px;"></h2>
+          <img style="cursor: pointer;" src="[% static 'images/fluent_speaker-1-24-regular.png' %}" alt="">
+        </div>
+        <div class="o2">
+          <i class="fa-solid fa-x" style="cursor: pointer;"></i>
+        </div>
+
+      </div>
+      <div class="Two">
+        <textarea name="" id="Field2"></textarea>
+      </div>
+      <div class="three1">
+        <i class="fa-regular fa-copy"></i>
+        <i class="fa-solid fa-share-from-square"></i>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the select elements
+const selectOne = document.querySelector('.type-one select');
+const selectTwo = document.querySelector('.type-three select');
+
+const refferOne = document.querySelector(".reffer1");
+const refferTwo = document.querySelector(".reffer2");
+
+function updateRefferText() {
+  const selectedOptionOne = selectOne.options[selectOne.selectedIndex];
+  const selectedOptionTwo = selectTwo.options[selectTwo.selectedIndex];
+
+  refferOne.textContent = ` ${selectedOptionOne.getAttribute('name')}`;
+  refferTwo.textContent = ` ${selectedOptionTwo.getAttribute('name')}`;
+}
+
+updateRefferText();
+
+selectOne.addEventListener('change', updateRefferText);
+selectTwo.addEventListener('change', updateRefferText);
+
+function swapOptions() {
+  const valueOne = selectOne.value;
+  const valueTwo = selectTwo.value;
+
+  selectOne.value = valueTwo;
+  selectTwo.value = valueOne;
+
+  updateRefferText();
+}
+
+// Translator condition
+document.querySelector(".transl").addEventListener('click', function () {
+  const inputText = document.querySelector("#Field1").value;
+  const fromLanguage = document.querySelector('.tran').value;
+  const toLanguage = document.querySelector('.tran1').value;
+
+  if (inputText.trim() === "") {
+    alert("Please enter some text to translate");
+    return;
+  }
+
+  fetch(`https://api.mymemory.translated.net/get?q=${inputText}&langpair=${fromLanguage}|${toLanguage}`)
+    .then(response => response.json())
+    .then(data => {
+      const translatedText = data.responseData.translatedText;
+      document.querySelector('#Field2').value = translatedText;
+    })
+    .catch(error => {
+      console.error("Error with translation:", error);
+      alert("Translation failed");
+    });
+});
+
+// Add event listeners to the 'X' icons for clearing text areas
+document.querySelectorAll('.boxTwo-nav .o2 i').forEach((icon, index) => {
+  icon.addEventListener('click', function () {
+    if (index === 0) {
+      // Clear the first text area (Field1)
+      document.querySelector('#Field1').value = "";
+    } else if (index === 1) {
+      // Clear the second text area (Field2)
+      document.querySelector('#Field2').value = "";
+    }
+  });
+});
+
+// Function to read aloud the text inside the textarea
+function readTextAloud(text) {
+  const speech = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(speech);
+}
+
+// Voice image event listener for the first textarea (Field1)
+document.querySelector('.boxTwo-nav .One .o img').addEventListener('click', function () {
+  const textToRead = document.querySelector('#Field1').value;
+  if (textToRead.trim() !== "") {
+    readTextAloud(textToRead);
+  }
+});
+
+// Voice image event listener for the second textarea (Field2)
+document.querySelector('.boxTwo-nav .One .o img').addEventListener('click', function () {
+  const textToRead = document.querySelector('#Field2').value;
+  if (textToRead.trim() !== "") {
+    readTextAloud(textToRead);
+  } else {
+    alert("No text available to read aloud in the second field");
+  }
+});
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+  <style>
+    .full {
+      width: 100%;
+      height: 100vh;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      background:
+        linear-gradient(to right, rgba(194, 187, 255, 1), rgba(188, 236, 255, 0.42)),
+        linear-gradient(to right, #C2BBFF, #FFBBBB);
+      overflow: hidden;
+      position: relative;
+    }
+    .recOne {
+      position: absolute;
+      width: 240px;
+      opacity: 0.4;
+      top: 200px;
+      left: 400px;
+    }
+    .recTwo {
+      width: 200px;
+      opacity: 0.4;
+    }
+    .textspeak {
+      z-index: 100;
+      position: absolute;
+      left: 0;
+      top: 150px;
+      width: 450px;
+    }
+    .notations {
+      position: absolute;
+      top: 100px;
+      left: 440px;
+    }
+    .we_tran {
+      position: absolute;
+      top: 300px;
+      left: 100px;
+    }
+    .arrow {
+      position: absolute;
+      top: 370px;
+      left: 100px;
+      width: 450px;
+    }
+    .girl {
+      position: absolute;
+      top: 80px;
+      right: 250px;
+      width: 200px;
+    }
+    .girl_back {
+      position: absolute;
+      top: 80px;
+      right: 250px;
+      width: 200px;
+      opacity: 0.6;
+    }
+    .girl_back2 {
+      position: absolute;
+      top: 90px;
+      right: 240px;
+      width: 200px;
+    }
+    .lastRec {
+      position: absolute;
+      top: 300px;
+      right: -100px;
+      width: 200px;
+      opacity: 0.4;
+    }
+    .tran1 {
+      position: absolute;
+      top: 200px;
+      right: 60px;
+      width: 200px;
+    }
+    .tran2 {
+      position: absolute;
+      top: 450px;
+      right: 60px;
+      width: 200px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    nav .img img {
+      width: 60px;
+    }
+    nav .links ul {
+      display: flex;
+      list-style: none;
+      gap: 50px;
+    }
+    nav .links ul li a {
+      text-decoration: none;
+      color: #807d94;
+      font-family: "Jomhuria", serif;
+      font-weight: 200;
+      font-size: 35px;
+      transition: 0.3s;
+    }
+    nav .links ul li a:hover {
+      color: #F96E41;
+    }
+    nav .links ul li:nth-child(1) a {
+      color: #F96E41;
+    }
+    .btn button {
+      border: none;
+      background-color: #F96E41;
+      color: white;
+      font-family: "Jomhuria", serif;
+      font-size: 24px;
+      padding: 5px 10px;
+      border-radius: 28px 20px;
+      cursor: pointer;
+    }
+    .register {
+      margin-top: 50px;
+      margin-left: 150px;
+    }
+    .register button {
+      border: none;
+      color: white;
+      background-color: #283A90;
+      font-family: "Jomhuria", serif;
+      font-size: 30px;
+      padding: 8px 25px;
+      border-radius: 23px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .register button:hover {
+      background-color: #283990a8;
+    }
+
+       .full {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .main-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .part-one {
+      width: 60%;
+      height: 100%;
+      display: grid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      padding: 20px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      gap: 100px;
+    }
+
+    .profile {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+
+      /* Space between image and content */
+      background-color: aliceblue;
+    }
+
+    .image .img-contain {
+
+      width: 80px;
+      /* Fixed size for the profile image */
+      height: 80px;
+      border-radius: 50%;
+      /* Perfect circle for the image */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image .img-contain img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      left:1px;
+      /* Ensures the image scales correctly */
+    }
+
+    .content {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+
+    }
+
+    .part-two {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .part-two img {
+      width: 300px;
+    }
+
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #222;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+.one{
+  display: flex;
+ gap: 10px;
+  justify-content: space-between;
+
+}
+.two{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  </style>
+</head>
+<body>
+  <div class="full">
+    <div class="container">
+      <nav>
+        <div class="img">
+          <img src="{% static 'images/mundo 2.png' %}" alt="">
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="{% url 'HomePage' %}">Home</a></li>
+            <li><a href="{% url 'services' %}" target="_blank">Services</a></li>
+
+          </ul>
+        </div>
+        <div class="btn">
+          <a href="{% url 'Translator' %}" target="_blank"><button>Get Started</button></a>
+        </div>
+      </nav>
+      <div class="main-container">
+      <div class="part-one">
+              <div class="team-container">
+                <div class="one">
+                    <div class="profile-card">
+                      <div class="profile-image">
+                        <img src="{% static 'images/praneeth.jpg' %}" >
+                      </div>
+                      <h3>Praneeth</h3>
+                      <p>Front-End / Ui/Ux Design</p>
+                    </div>
+
+                    <div class="profile-card">
+                      <div class="profile-image">
+                        <img src="{% static 'images/pranav_img.jpg' %}"  >
+                      </div>
+                      <h3>pranav</h3>
+                      <p>Ui/Ux Design / Front-End</p>
+                    </div>
+                </div>
+               <div class="two">
+                  <div class="profile-card">
+                    <div class="profile-image">
+                      <img src="{% static 'images/saketh.jpg' %}"  >
+                    </div>
+                    <h3>Saketh</h3>
+                    <p>Database</p>
+                  </div>
+                  </div>
+               </div>
+
+
+      </div>
+      <div class="part-two">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/2048px-Google_Translate_logo.svg.png"
+          alt="">
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>
